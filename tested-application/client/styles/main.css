@@ -1,0 +1,78 @@
+.ingredient-picker {
+    display: inline-block;
+    width: 250px;
+    border-style: ridge;
+    height: 60px;
+    margin: 2px;
+}
+
+.ingredient-picker img {
+    float: right;
+}
+
+.action-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-color: transparent;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.action-button:active {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-color: transparent;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    left: 2px;
+    position: relative;
+}
+
+.ingredient-picker button {
+    background-image: url("/images/icons/add.svg");
+}
+
+.remove-button {
+    background-image: url("/images/icons/close.svg");
+}
+
+.decrease-button {
+    background-image: url("/images/icons/minus.svg");
+}
+
+.box-title {
+    font-size: 13pt;
+}
+
+.box-details {
+    font-size: 9pt;
+    display: inline-block;
+    text-spacing: none;
+}
+
+.box-details p{
+    text-spacing: none;
+}
+
+.gray-out {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.error {
+    color: red;
+}
+
+/*.ingredient-picker button:active  {*/
+    /*background-image: url("/images/icons/add.svg");*/
+
+/*}*/
