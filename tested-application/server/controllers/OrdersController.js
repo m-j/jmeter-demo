@@ -1,6 +1,8 @@
 var db = require('../db/db')
 
 function OrdersController(){
+    var ordersSubmitted = 0;
+
     function getOrderIngredientCounts(order) {
         var orderIngredientCounts = order.items.reduce(function (accumulator, potion) {
             potion.ingredients.forEach(function (ingredient) {
@@ -35,12 +37,13 @@ function OrdersController(){
             var orderIngredientCounts = getOrderIngredientCounts(req.body);
             if(isOrderValid(orderIngredientCounts)){
                 decreaseStockCounts(orderIngredientCounts)
+                ordersSubmitted++
                 res.send({result: 'ok'})
             }
             else {
                 res.status(400).send({result: 'Order contains more ingredients than are available in stock'})
             }
-        },500)
+        },200 + (ordersSubmitted > 1000 ? ordersSubmitted : 0) )
     })
 }
 

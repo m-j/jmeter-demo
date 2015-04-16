@@ -1,4 +1,4 @@
-module.exports = [
+var ingredients = [
     {
         name: 'Abomination lymph',
         icon : '/images/mixture-icons/Substances_Abomination_lymph.png',
@@ -45,3 +45,18 @@ module.exports = [
         quantity: '12000000'
     }
 ]
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log('id,name,count')
+
+for(var i = 0; i < 1000; i++){
+	var arraryIndex = getRandomInt(0,ingredients.length)
+	var row = ingredients[arraryIndex]
+
+	var count = getRandomInt(1,4)	
+	var csvRow = arraryIndex + ',' + row.name + ',' + count
+	console.log(csvRow)
+}
