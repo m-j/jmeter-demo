@@ -43,7 +43,7 @@ function OrdersController(){
             else {
                 res.status(400).send({result: 'Order contains more ingredients than are available in stock'})
             }
-        },200 + (ordersSubmitted > 1000 ? ordersSubmitted : 0) )
+        }, 200 + (ordersSubmitted > 4000 ? ordersSubmitted : 0) )
     })
 }
 

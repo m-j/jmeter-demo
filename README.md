@@ -21,7 +21,11 @@ npm start
 
 ## Running jmeter tests
 
-Required version of jmeter is apache-jmeter-2.12 or newer with JMeterPlugins-ExtrasLibs-1.2.1 libs set.
+Required dependencies: 
+
+- apache-jmeter-2.12
+- JMeterPlugins-ExtrasLibs-1.2.1
+- JMeterPlugins-Standard-1.2.1
 
 
 
